@@ -1,0 +1,39 @@
+<% include ../partials/header %>
+
+<div class="container">
+    <div class="row">
+        <h1 style="text-align: center;">Make some art!!</h1>
+        <h3 style="text-align: center;"><span id="time"></span> seconds left!</h3>
+        <div style="width: 50%; margin: 25px auto;">
+            
+            
+            <!-- form to POST canvas data and submission name after timeout -->
+            <form id="imageForm" action="/art/<%=currentUser._id%>" method="POST">
+                
+                <h3 style="text-align: center;">Name your submission:</h3>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="title" placeholder="Your submission's name" maxlength="40">
+                </div>
+                
+                <!-- hidden input for canvas data -->
+                <input id="img" class="invisible" type="text" name="img">
+
+                <!-- where the widget goes -->
+                 <div class="my-drawing"></div>
+
+                 <p></p>
+                <button id="submitButton" class="btn btn-large btn-primary btn-block">Submit!</button>
+            </form>
+            
+            <!-- start the drawing app -->
+            <script src="js/drawingApp.js">
+            </script>
+            
+            <hr>
+            <a href="/home">Go Back</a>
+            
+        </div>
+    </div>
+</div>
+
+<% include ../partials/footer %>

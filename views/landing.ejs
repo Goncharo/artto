@@ -1,0 +1,50 @@
+<% include partials/header %>
+
+<div class="jumbotron">
+    <div class="container">
+        <h1 class="display-3 text-center">Welcome to Artto!</h1>
+        <p class="lead text-center">Submissions this round: <span id="subs"></span></p>
+        <p class="text-center">Time left until next round: <span id="time"></span></p>
+    </div>
+</div>
+
+<div class="container">
+
+    <h1 class="text-center"><i class="fa fa-question-circle fa-2x" aria-hidden="true"></i></h1>
+    <h1 class="text-center">What is Artto?</h1>
+    <p class="text-center">Artto is a fun way to participate in an experiment about computer defined beauty.</p>
+    <hr>
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="text-center"><i class="fa fa-money fa-5x" aria-hidden="true"></i></div>
+            <div class="caption">
+                <h3 class="text-center">1. Pay the submission fee</h3>
+                <p class="text-center">After creating your account, you are able to participate in the weekly artwork selections. You simply need to pay a service fee of $1 and then you are free to create a submission for the current weely round!</p>         
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="text-center"><i class="fa fa-paint-brush fa-5x" aria-hidden="true"></i></div>
+            <div class="caption">
+                <h3 class="text-center">2. Create your art!</h3>
+                <p class="text-center">After paying the fee, you are given 60 seconds to create and title a painting for our specialized computer, Arthur, to view. You are only able to make one submission per round, so try your best to make the piece as aesthetic as possible!</p>         
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="text-center"><i class="fa fa-trophy fa-5x" aria-hidden="true"></i></div>
+            <div class="caption">
+                <h3 class="text-center">3. Hall of Fame?</h3>
+                <p class="text-center">Every Sunday, Arthur uses the submission fees to make a bid on his favourite artwork of the last week. If you decide to sell your artwork to Arthur, the painting is entered in the Hall of Fame, where all of Arthur's favourites are on display!</p>         
+            </div>
+        </div>
+    </div>
+    <hr>
+
+
+    <script src="js/updateSystemStateLanding.js">
+    </script>
+
+    
+</div>
+
+<% include partials/footer %>

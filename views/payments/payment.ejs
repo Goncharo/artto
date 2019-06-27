@@ -1,0 +1,25 @@
+<% include ../partials/header %>
+
+<div class="container">
+    <div class="row">
+        <h1 style="text-align: center;">Create a submission</h1>
+        <div style="width: 50%; margin: 25px auto;">
+            <form action="/charge/<%=currentUser._id%>" method="POST">
+                <script
+                  src="https://checkout.stripe.com/checkout.js",
+                  class="stripe-button",
+                  data-key= "<%= keyPublishable %>",
+                  data-amount="100"
+                  data-name="Artto"
+                  data-description="Draw"
+                  data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+                  data-locale="auto"
+                  data-currency="usd">
+                </script>
+            </form>
+            <a href="/home">Go Back</a>
+        </div>
+    </div>
+</div>
+
+<% include ../partials/footer %>

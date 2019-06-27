@@ -1,0 +1,48 @@
+html, body {
+  height: 100%
+}
+
+navbar .navbar-nav {
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+  margin: 0;
+}
+
+.navbar .navbar-collapse {
+  text-align: center;
+}
+
+.container-fluid {
+  padding: 0;
+}
+
+.navbar-inverse .navbar-brand {
+  font-size: 24px;
+  color: #95D4A3;
+}
+
+.navbar {
+  margin-bottom: 0
+}
+.jumbotron {
+  margin-bottom: 0;
+  background-color: #95D4A3;
+}
+
+#footer-Section {
+  color: #666666;
+  font-family: "Open Sans",sans-serif;
+  line-height: 24px;
+}
+
+.footer-bottom-layout {
+  background: #222222 none repeat scroll 0 0;
+  padding: 20px 0;
+  text-align: center;
+}
+
+
+.footer-bottom-layout {
+  text-align: center;
+}

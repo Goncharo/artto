@@ -1,0 +1,30 @@
+<% include ../partials/header %>
+
+<div class="container"> 
+    <div class="row">
+        <div style="width: 50%; margin: 25px auto;">
+            <h1>Your Profile</h1>
+            
+            <p>Username:  <%= currentUser.username %></p>
+            <p>Email:  <%= currentUser.email %></p>
+            
+            <a class="btn btn-sm btn-warning" href="/changePasswordProfile" role="button">Change Password</a>
+            <hr>
+            
+            <% if(currentUser.connectedToStripe){ %>
+            
+                <h4>Your account has been successfully connected to a Stripe account.</h4>
+            
+            <% } else { %>
+                
+                <h4>Your account isn't currently connected to Stripe.</h4>
+                <p>To be able to sell your submissions to Arthur, your account must be connected to Stripe so we can send you payments. Please click on the button below to connect to a Stripe account:</p>
+                <a class="btn btn-sm btn-info" href="<%= stripeConnectURL %>" role="button">Connect to Stripe</a>
+                
+            <% } %>
+            
+        </div>
+    </div>
+</div>
+
+<% include ../partials/footer %>

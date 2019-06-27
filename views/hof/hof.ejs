@@ -1,0 +1,40 @@
+<% include ../partials/header %>
+
+<div class="container">
+    
+    <script src="/js/hof.js">
+    </script>
+    
+    <script src="/js/spin.min.js">
+    </script>
+    
+    <div class="row" id="submissions">
+        <h1 style="text-align: center;"> <strong>Hall of Fame</strong></h1>
+
+        <% submissions.forEach(function(submission){ %>
+
+            <div class="col-md-12">
+                <div class="thumbnail">
+                    <div class="caption-full">
+                        <h2 style="text-align: center;"><%=submission.title%></h2>
+                        
+                    </div>
+                    <img class="img-responsive img-thumbnail" src="/hof/<%= submission._id %>.png" alt="submission">
+                    <div class="caption-full">
+                        
+                        <h4 style="text-align: center;">Estimated value: $<%= (submission.value.value / 100) %></h4>
+                        <p style="text-align: center;">
+                            <em>Submitted by: <%= submission.artist.username %> on <%= submission.dateSubmitted.toLocaleString() %></em>
+                        </p>
+                    </div>
+                        
+                </div>
+            </div>
+
+        <% }); %>
+
+    </div>
+    
+</div>
+
+<% include ../partials/footer %>
